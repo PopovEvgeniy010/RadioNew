@@ -6,6 +6,15 @@ import ru.notology.javaqa.Radio;
 
 public class RadioTest {
     @Test
+    public void shouledSetCountStationNumber() {
+        Radio cond = new Radio(45);
+        cond.setCurrentStationNumber(38);
+        int expected = 38;
+        int actual = cond.getCurrentStationNumber();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouledSetToMinNumber() {
         Radio cond = new Radio();
         cond.setToMinNumber();
@@ -18,7 +27,7 @@ public class RadioTest {
     public void shouledSetToMaxNumber() {
         Radio cond = new Radio();
         cond.setToMaxNumber();
-        int expected = 9;
+        int expected = 10;
         int actual = cond.getCurrentStationNumber();
         Assertions.assertEquals(expected, actual);
     }
@@ -35,7 +44,7 @@ public class RadioTest {
     @Test
     public void shouledNextSetStation2() {
         Radio cond = new Radio();
-        cond.setCurrentStationNumber(9);
+        cond.setCurrentStationNumber(10);
         cond.next();
         int expected = 0;
         int actual = cond.getCurrentStationNumber();
@@ -47,7 +56,7 @@ public class RadioTest {
     public void shouledPrevSetStation1() {
         Radio cond = new Radio();
         cond.prev();
-        int expected = 9;
+        int expected = 10;
         int actual = cond.getCurrentStationNumber();
         Assertions.assertEquals(expected, actual);
 
@@ -65,9 +74,10 @@ public class RadioTest {
     }
 
     @Test
-    public void shouledSetStation1() {
+    public
+    void shouledSetStation1() {
         Radio cond = new Radio();
-        cond.setCurrentStationNumber(10);
+        cond.setCurrentStationNumber(11);
         int expected = 0;
         int actual = cond.getCurrentStationNumber();
         Assertions.assertEquals(expected, actual);
@@ -95,7 +105,7 @@ public class RadioTest {
     public void shouledSetMaxSound() {
         Radio cond = new Radio();
         cond.SetMaxSound();
-        int expected = 10;
+        int expected = 100;
         int actual = cond.getCurrentSoundVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -112,7 +122,7 @@ public class RadioTest {
     @Test
     public void shouledSetStation2() {
         Radio cond = new Radio();
-        cond.setCurrentSoundVolume(11);
+        cond.setCurrentSoundVolume(101);
         int expected = 0;
         int actual = cond.getCurrentSoundVolume();
         Assertions.assertEquals(expected, actual);
@@ -130,9 +140,9 @@ public class RadioTest {
     @Test
     public void setIncreaseSound2() {
         Radio cond = new Radio();
-        cond.setCurrentSoundVolume(10);
+        cond.setCurrentSoundVolume(100);
         cond.increaseVolume();
-        int expected = 10;
+        int expected = 100;
         int actual = cond.getCurrentSoundVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -160,7 +170,7 @@ public class RadioTest {
     public void increaseSoundMax1() {
         Radio cond = new Radio();
         cond.increaseVolumeMax();
-        int expected = 10;
+        int expected = 100;
         int actual = cond.getCurrentSoundVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -168,9 +178,9 @@ public class RadioTest {
     @Test
     public void increaseSoundMax2() {
         Radio cond = new Radio();
-        cond.setCurrentSoundVolume(10);
+        cond.setCurrentSoundVolume(100);
         cond.increaseVolumeMax();
-        int expected = 11;
+        int expected = 101;
         int actual = cond.getCurrentSoundVolume();
         Assertions.assertEquals(expected, actual);
     }
