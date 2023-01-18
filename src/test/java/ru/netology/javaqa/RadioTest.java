@@ -13,6 +13,7 @@ public class RadioTest {
         int actual = cond.getCurrentStationNumber();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouledSetToMinNumber() {
         Radio cond = new Radio();
@@ -73,7 +74,8 @@ public class RadioTest {
     }
 
     @Test
-    public void shouledSetStation1() {
+    public
+    void shouledSetStation1() {
         Radio cond = new Radio();
         cond.setCurrentStationNumber(11);
         int expected = 0;

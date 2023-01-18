@@ -1,18 +1,18 @@
 package ru.notology.javaqa;
 
-public
-class Radio {
+public class Radio {
     private int currentStationNumber;
     private int maxCurrentStationNumber;
     private int currentSoundVolume;
     private int minCurrentSoundVolume = 0;
     private int maxCurrentSoundVolume = 100;
 
-    public Radio(){
+    public Radio() {
         maxCurrentStationNumber = 10;
     }
-    public Radio (int countStationNumber){
-        maxCurrentStationNumber = countStationNumber -1;
+
+    public Radio(int countStationNumber) {
+        maxCurrentStationNumber = countStationNumber - 1;
 
     }
 
